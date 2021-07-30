@@ -55,12 +55,20 @@ body {
   color: #2c3e50;
   background: linear-gradient(-45deg, #19C5FE, #4553FF);
   min-height: 100vh;
+  line-height: 1.5;
 }
 
 nav ul {
   display: flex;
   justify-content: center;
   margin: 20px 0;
+}
+
+nav ul li {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
 }
 
 button {
@@ -75,4 +83,48 @@ button {
 
 button:hover {
   color: lightgray;
+}
+
+.menu {
+  display: none;
+  position: absolute;
+  background: white;
+  border-radius: 5px;
+  padding: 10px;
+  top: 100%;
+  transition: opacity 500ms ease-in, transform 500ms;
+}
+
+.menu.menu-enter {
+  display: block;
+  opacity: 0;
+  transform: translateY(-40px);
+}
+
+.menu.menu-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.menu.menu-leave {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.menu.menu-leave-active {
+  opacity: 0;
+  transform: translateY(-40px);
+}
+
+.menu-products {
+  width: 300px;
+}
+
+.menu-developers {
+  width: 500px;
+}
+
+.menu-company {
+  width: 400px;
 }
