@@ -97,6 +97,7 @@ button:hover {
   display: flex;
   justify-content: center;
   transition: all 200ms;
+  transform-origin: 0 0;
 }
 
 .menu-background.open {
@@ -104,11 +105,17 @@ button:hover {
 }
 
 .arrow {
+  opacity: 0;
   position: absolute;
   width: 14px;
   height: 14px;
   background: white;
   transform: rotate(45deg) translateY(-50%);
+  transition: all 200ms;
+}
+
+.arrow.open {
+  opacity: 1;
 }
 
 .menu {
